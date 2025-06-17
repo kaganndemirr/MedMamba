@@ -8,7 +8,7 @@ from torchvision import transforms, datasets
 import torch.optim as optim
 from tqdm import tqdm
 
-from Medmamba import VSSM as medmamba # import model
+from MedMamba import VSSM as medmamba # import model
 
 
 def main():
@@ -43,7 +43,7 @@ def main():
                                                batch_size=batch_size, shuffle=True,
                                                num_workers=nw)
 
-    validate_dataset = datasets.ImageFolder(root="the path of your validation set",,
+    validate_dataset = datasets.ImageFolder(root="the path of your validation set",
                                             transform=data_transform["val"])
     val_num = len(validate_dataset)
     validate_loader = torch.utils.data.DataLoader(validate_dataset,
